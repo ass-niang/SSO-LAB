@@ -7,6 +7,10 @@
 - Module : Sécurité Systèmes
 - Année scolaire : 2024 - 2025
 
+=================================================================
+
+Par
+
 1. Ass NIANG
 2. Adrien CERVANTES
 3. Mohamed HACHAMI
@@ -15,6 +19,44 @@
 =================================================================
 
 # Table des matières
+
+- [1. Déploiement Simple : Reverse Proxy, SSO et BDD](#1-déploiement-simple--reverse-proxy-sso-et-bdd)
+  - [1.1. Architecture](#11-architecture)
+  - [1.2. Configurations](#12-configurations)
+    - [1.2.1. BDD](#121-bdd)
+    - [1.2.2. Keycloak](#122-keycloak)
+    - [1.2.3. HAProxy](#123-haproxy)
+  - [1.3. Notre SSO est-il sécurisé ?](#13-notre-sso-est-il-sécurisé)
+
+- [2. Déploiement en HA de notre infra ?](#2-déploiement-en-ha-de-notre-infra-)
+  - [2.1. Architecture et Adressage](#21-architecture-et-adressage)
+  - [2.2. Configuration des serveurs](#22-configuration-des-serveurs)
+    - [2.2.1. BD SSO (MySQL)](#221-bd-sso-mysql)
+    - [2.2.2. Keycloak](#222-keycloak)
+    - [2.2.3. Load balancers](#2231-load-balancers)
+  - [2.3. Sécurisation du SSO](#23-sécurisation-du-sso)
+    - [2.3.1. Déployer Keycloak en HTTPS](#231-déployer-keycloak-en-https)
+    - [2.3.2. Filtrer les échanges sur le réseau](#232-filtrer-les-échanges-sur-le-réseau)
+
+- [3. Qu'est-ce qu'un Realm ?](#3-quest-ce-quun-realm)
+
+- [4. Conception d'une architecture de sécurité](#4-conception-dune-architecture-de-sécurité)
+  - [4.1. Architecture](#41-architecture)
+  - [4.2. Description](#42-description)
+
+- [Bonus 1 : Sécurisation de Nextcloud avec Keycloak](#bonus-1--sécurisation-de-nextcloud-avec-keycloak)
+  - [B1.1. Déploiement de Nextcloud](#b11-déploiement-de-nextcloud)
+  - [B1.2. Configurations dans Keycloak](#b12-configurations-dans-keycloak)
+  - [B1.3. Configurations dans NextCloud](#b13-configurations-dans-nextcloud)
+  - [B1.4. Test](#b14-test)
+
+- [Bonus 2 : Déploiement et Intégration de LDAP](#bonus-2--déploiement-et-intégration-de-ldap)
+  - [B2.1. Déploiement de LDAP](#b21-déploiement-de-ldap)
+  - [B2.2. Intégration de LDAP dans le realm : nextcloud_oid](#b22-intégration-de-ldap-dans-le-realm--nextcloud_oid)
+  - [B2.3. Test](#b23-test)
+  - [B2.4. Limitations lors de l'intégration de l'annuaire](#b24-limitations-lors-de-lintégration-de-lannuaire)
+
+- [Bonus 3 : Intégration avec Kerberos](#bonus-3--intégration-avec-kerberos)
 
 # 1. Déploiement Simple : Reverse Proxy, SSO et BDD
 
