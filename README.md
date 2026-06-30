@@ -210,7 +210,7 @@ Notre infrastructure bénéficie d’une redondance applicative mise en place pa
 
 - Architecture
     
-    ![2025-01-19-110048_589x584_scrot.png](2025-01-19-110048_589x584_scrot.png)
+    ![2025-01-19-110048_589x584_scrot.png](images/2025-01-19-110048_589x584_scrot.png)
     
 - Adressage
     
@@ -1158,7 +1158,7 @@ Pour la configuration de nextcloud et keycloak
     - Capability Config
         - Client Authentication : Enabled
     
-    ![2025-01-19-132630_1060x854_scrot.png](2025-01-19-132630_1060x854_scrot.png)
+    ![2025-01-19-132630_1060x854_scrot.png](images/2025-01-19-132630_1060x854_scrot.png)
     
     <aside>
     💡
@@ -1179,7 +1179,7 @@ Pour la configuration de nextcloud et keycloak
     - Client Secret : `LeSecretRecupereSurKeycloak`
     - Scope : openid
     
-    ![2025-01-19-133157_502x945_scrot.png](2025-01-19-133157_502x945_scrot.png)
+    ![2025-01-19-133157_502x945_scrot.png](images/2025-01-19-133157_502x945_scrot.png)
     
     <aside>
     💡
@@ -1194,19 +1194,19 @@ Pour la configuration de nextcloud et keycloak
 - Connexion à Nextcloud à travers Keycloak
     1. Créer un user dans keycloak : 
         
-        ![2025-01-19-133547_1577x391_scrot.png](2025-01-19-133547_1577x391_scrot.png)
+        ![2025-01-19-133547_1577x391_scrot.png](images/2025-01-19-133547_1577x391_scrot.png)
         
     2. GET sur le service Nextcloud 
         
-        ![2025-01-19-133344_443x483_scrot.png](2025-01-19-133344_443x483_scrot.png)
+        ![2025-01-19-133344_443x483_scrot.png](images/2025-01-19-133344_443x483_scrot.png)
         
     3. Connexion via Keycloak :
         
-        ![2025-01-19-133403_552x456_scrot.png](2025-01-19-133403_552x456_scrot.png)
+        ![2025-01-19-133403_552x456_scrot.png](images/2025-01-19-133403_552x456_scrot.png)
         
     4. Connexion réussie, redirection vers la page d’accueuil: 
         
-        ![2025-01-19-133503_554x792_scrot.png](2025-01-19-133503_554x792_scrot.png)
+        ![2025-01-19-133503_554x792_scrot.png](images/2025-01-19-133503_554x792_scrot.png)
         
 
 # Bonus 2 : Déploiement et Intégration de LDAP
